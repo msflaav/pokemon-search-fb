@@ -10,6 +10,7 @@ A simple search engine, that given a Pokemon name, returns its Shakespeare descr
 
 ## APIs Used
 https://funtranslations.com/api/shakespeare
+
 https://pokeapi.co/docs/v2
 
 ## Install
