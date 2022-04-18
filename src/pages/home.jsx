@@ -23,6 +23,7 @@ export default function HomePage() {
   const [error, setError] = React.useState(false);
   const [errorMsg, setErrorMsg] = React.useState('');
 
+  
   const getPokemon = async (query) => {
     if (!query) {
       setErrorMsg('You must enter a valid Pokemon name');
@@ -43,7 +44,6 @@ export default function HomePage() {
     setPokemon(finalResults2);
     setLoading(false);
       } catch (err) {
-        console.log(err);
         setLoading(false);
         setError(true);
         setErrorMsg('Pokemon not found.');
@@ -53,7 +53,8 @@ export default function HomePage() {
 
   return (
     <div>
-      {error ? (<Alert variant='danger'>{errorMsg}</Alert>): null}
+      <h1 style={{ textAlign: "center",}}>Welcome to the pokemon search engine</h1>
+      {error ? (<Alert data-testid = "alert" variant='danger'>{errorMsg}</Alert>): null}
       <Search getPokemon={getPokemon} />
       {loading ? (
         <div style={spinnerWrapperStyle}>

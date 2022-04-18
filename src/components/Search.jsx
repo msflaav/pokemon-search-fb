@@ -11,11 +11,14 @@ export default function Search(props) {
           <Form.Control
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search for Pokemon"
+            data-testid = "search-box"
           />
         </Col>
         <Col sm={2} className="my-1">
-          <Button  onClick={(e) => props.getPokemon(search)}>
-            Search
+          <Button 
+           data-testid = "button"
+           onClick={(e) => props.getPokemon(search)}>
+             Search
           </Button>
         </Col>
       </Form>
